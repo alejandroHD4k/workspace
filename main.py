@@ -1,25 +1,14 @@
 import streamlit as st
 
-st.title("Alejandro")
-st.caption("soy orgullosamente UIS ;P ")
-st.caption("amante las matematicas, casado con el arte")
+#1 crear paginas 
+intro = st.Page("paginas/intro.py", title="introduccion")
+ejs = st.Page("paginas/ejercicios.py", title="ejercicios") 
+#graficas = st.Page("paginas/graficas.py", tittle="graficas")
+#icon="markdown")
+#icon=":material/googlefonts defaul= True)
 
-#titulos
-st.title(grande) 
-st.header(mediano) 
-st.subheader(pequeño)
+# 2) navigation
+pg = st.navigation([intro, ejs])
 
-#textos
-st.markdown("""
-en esto puedes poner cualquier texto
-poner un texto en **negrilla**, *italica* o en ***ambos***
-
-enumeraciones:
-1.primer item
-2.segundo item
-3. tercer item
-
-
-
-
-""")
+#3) ejecuta
+pg.run()
